@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript beadandó</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="" method="post" class="text-center">
+            <h1>Megtakarítás - Kalkulátor</h1>
+
+            <label for="megtakaritas" class="mb-3">Heti megtakarításod (Ft):</label>
+            <input type="number" name="megtakaritas" id="megtakaritas"
+                class="form-control rounded-pill text-center mb-3" placeholder="Csak szám (pl.:1000)">
+
+            <div>
+                <label for="sporolas" class="mb-3">Mennyi ideje spórolsz?</label>
+                <select id="idoValaszto" class="form-select rounded-pill text-center mb-3">
+                    <option value="0" selected disabled>Kérem válasszon</option>
+                    <option value="1">Fél év</option>
+                    <option value="2">Egy év</option>
+                    <option value="3">Három év</option>
+                    <option value="4">Öt év</option>
+                </select>
+            </div>
+
+            <div class="form-check mb-3">
+                <input type="radio" name="radio" id="kerekpar">
+                <label for="kerekpar">🚲Kerékpár - 100.000 Ft🚲</label>
+            </div>
+
+            <div class="form-check mb-3">
+                <input type="radio" name="radio" id="telefon">
+                <label for="telefon">📱Telefon - 80.000 Ft📱</label>
+            </div>
+
+            <div class="form-check mb-3">
+                <input type="radio" name="radio" id="konzol">
+                <label for="konzol">🎮Játékkonzol - 150.000 Ft🎮</label>
+            </div>
+
+            <button type="button" class="btn shadow btn-outline-dark w-50 rounded-pill mb-3" id="btn">Számítás
+                elvégzése</button>
+
+        </form>
+        <div class="text-center">
+            <p id="eredmeny"></p>
+            <p id="elegPenz"></p>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
