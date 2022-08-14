@@ -21,7 +21,7 @@ body{
     background: rgba(255, 254, 254, 0.336);
     backdrop-filter: blur(5px);
     color: #000;
-    width: 100%;
+    width: 50%;
 }
 
 form h1{
