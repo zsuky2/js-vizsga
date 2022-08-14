@@ -17,7 +17,7 @@ document.getElementById("btn").addEventListener("click", function () {
 
 
     if (megtakaritas <= 0 || megtakaritas % 1 != 0 || idoValaszto.value == 0 || (kerekpar.checked == false && telefon.checked == false && konzol.checked == false)) {
-        alert("Nem töltött ki minden mezőt vagy hibás adatot adott meg! Figyeljen arra, hogy a megtakarítás csak egész szám lehet!");
+        alert("Nem töltött ki minden mezőt vagy hibás adatot adott meg! Figyeljen arra, hogy a megtakarítás csak pozitív egész szám lehet!");
 
     } else {
 
