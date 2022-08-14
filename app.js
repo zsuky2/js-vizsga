@@ -27,9 +27,10 @@ document.getElementById("btn").addEventListener("click", function () {
         text.innerHTML = "Az ön megtakarítása: " + forintHULocale.format(eredmeny) + " Forint";
 
     } else if (elteltIdo == 2) {
-        text.innerHTML = "Az ön megtakarítása: " + forintHULocale.format(eredmeny) + " Forint";
-
+        
         var eredmeny = megtakaritas * 52;
+        text.innerHTML = "Az ön megtakarítása: " + forintHULocale.format(eredmeny) + " Forint";
+       
     } else if (elteltIdo == 3) {
 
         var eredmeny = megtakaritas * 156;
