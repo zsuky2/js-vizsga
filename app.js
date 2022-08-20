@@ -14,18 +14,24 @@ document.getElementById("btn").addEventListener("click", function () {
     radio = document.getElementsByName("radio");
 
 
-    if (megtakaritas <= 0 || megtakaritas % 1 != 0) {
+    if ((megtakaritas <= 0 || megtakaritas % 1 != 0 ) && idoValaszto.value == 0) {
+
+        alert("Nem töltött ki minden mezőt vagy hibás adatot adott meg! Figyeljen arra, hogy a megtakarítás csak pozitív egész szám lehet!");
+        megtakaritasInput.classList.remove("border-danger");
+        idoValaszto.classList.remove("border-danger");
+        megtakaritasInput.classList.add("border-danger");
+        idoValaszto.classList.add("border-danger");
+        
+    } else if (megtakaritas <= 0 || megtakaritas % 1 != 0) {
 
         megtakaritasInput.classList.add("border-danger");
+        idoValaszto.classList.remove("border-danger");
         alert("Hibás adatot adott meg! Figyeljen arra, hogy a megtakarítás csak pozitív egész szám lehet!");
     } else if (idoValaszto.value == 0) {
 
         idoValaszto.classList.add("border-danger");
+        megtakaritasInput.classList.remove("border-danger");
         alert("Nem választotta ki, hogy mennyi ideig spórolt!");
-    } else if (megtakaritas <= 0 || megtakaritas % 1 != 0 || idoValaszto.value == 0 || (kerekpar.checked == false && telefon.checked == false && konzol.checked == false)) {
-
-        alert("Nem töltött ki minden mezőt vagy hibás adatot adott meg! Figyeljen arra, hogy a megtakarítás csak pozitív egész szám lehet!");
-
     } else {
 
         if (elteltIdo == 1) {
